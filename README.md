@@ -13,7 +13,7 @@ PIPELINE:
 
 3) Creation of binary mask from wc1, wc2, wc3:    sara_binary_mask_creation.m 
 
-4)Temporal Filtering:                             sara_filter_resting_data.m
+4) Temporal Filtering:                             sara_filter_resting_data.m
   Unzip and delete compressed files: unzip_and_delete.m (I forgot to include this in the temporal filtering script)
 
 
