@@ -14,9 +14,16 @@ PIPELINE:
 3) Creation of binary mask from wc1, wc2, wc3:    sara_binary_mask_creation.m 
 
 4)Temporal Filtering:                             sara_filter_resting_data.m
+  Unzip and delete compressed files: unzip_and_delete.m (I forgot to include this in the temporal filtering script)
 
-5) Creation of 4 chunks from firm time series:    split_chunks_creation.m
 
-6) First level GLM to extract time series for DCM:  sara_glm.m
+5) Split regressor txt files into 4 chunks :  split_text_file.m
+6) Creation of 4 chunks from fMRI time series:    split_chunks_creation.m
 
-7) Selection of VOIs (extraction of fmri time series of ROIs only):   sara_VOIselection_indiv_coords.m
+7) First level GLM to extract time series for DCM - 4 VERSIONS:
+    a) sara_singleGLM_NO_regressors.m  -    GLM for WHOLE data from participants without excessive movement
+    b) sara_singleGLM_REGRESSORS.m     -    GLM for WHOLE data from participants WITH excessive movement regressors
+    c) sara_4GLMs_NO_regressors.m      -    GLM for split data from participants without excessive movement
+    d) sara_4GLMs_REGRESSORS.m         -    GLM for split data from participants WITH excessive movement regressors
+
+8) Selection of VOIs (extraction of fmri time series of ROIs only):   sara_VOIselection_indiv_coords.m
