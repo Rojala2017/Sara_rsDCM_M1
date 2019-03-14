@@ -11,17 +11,17 @@ PIPELINE:
                                                       find_excessive_motion_sara.m  (create a table of all subjects)
                                                       sara_regressor_fmri.m  (create a regr matrix of 0s/1s for each subj/ses)
 
-3) Creation of binary mask from wc1, wc2, wc3:    sara_binary_mask_creation.m 
+3) Creation of binary mask from wc1, wc2, wc3:    sara_binary_mask_creation.m  (OPTIONAL)
 
-4) Temporal Filtering:                             sara_filter_resting_data.m
+4) Temporal Filtering:                            sara_filter_resting_data.m
   Unzip and delete compressed files: unzip_and_delete.m (I forgot to include this in the temporal filtering script)
 
 
-5) Split regressor txt files into 4 chunks :  split_text_file.m
+5) Split regressor txt files into 4 chunks :      split_text_file.m
 6) Creation of 4 chunks from fMRI time series:    split_chunks_creation.m
 
 7) First level GLM to extract time series for DCM - 4 VERSIONS:
-    a) sara_singleGLM_NO_regressors.m  -    GLM for WHOLE data from participants without excessive movement
+    a) sara_INF_single_NO_regressors.m  -    GLM for WHOLE data from participants without excessive movement
     b) sara_singleGLM_REGRESSORS.m     -    GLM for WHOLE data from participants WITH excessive movement regressors
     c) sara_4GLMs_NO_regressors.m      -    GLM for split data from participants without excessive movement
     d) sara_4GLMs_REGRESSORS.m         -    GLM for split data from participants WITH excessive movement regressors
