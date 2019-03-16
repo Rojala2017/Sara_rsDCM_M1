@@ -16,14 +16,15 @@ PIPELINE:
 4) Temporal Filtering:                            sara_filter_resting_data.m
   Unzip and delete compressed files: unzip_and_delete.m (I forgot to include this in the temporal filtering script)
 
+5) ROI extraction for quality check:  ROI_extraction.m  (contains three different ways of performing rois extraction)
 
-5) Split regressor txt files into 4 chunks :      split_text_file.m
-6) Creation of 4 chunks from fMRI time series:    split_chunks_creation.m
+6) Split regressor txt files into 4 chunks :      split_text_file.m
+7) Creation of 4 chunks from fMRI time series:    split_chunks_creation.m
 
-7) First level GLM to extract time series for DCM - 4 VERSIONS:
+8) First level GLM to extract time series for DCM - 4 VERSIONS:
     a) sara_INF_single_NO_regressors.m  -    GLM for WHOLE data from participants without excessive movement
-    b) sara_singleGLM_REGRESSORS.m     -    GLM for WHOLE data from participants WITH excessive movement regressors
-    c) sara_4GLMs_NO_regressors.m      -    GLM for split data from participants without excessive movement
-    d) sara_4GLMs_REGRESSORS.m         -    GLM for split data from participants WITH excessive movement regressors
+    b) sara_INF_single_REGRESSORS.m     -    GLM for WHOLE data from participants WITH excessive movement regressors
+    c) sara_INF_4_NO_regressors.m      -    GLM for split data from participants without excessive movement
+    d) sara_INF_4_REGRESSORS.m         -    GLM for split data from participants WITH excessive movement regressors
 
-8) Selection of VOIs (extraction of fmri time series of ROIs only):   sara_VOIselection_indiv_coords.m
+9) Selection of VOIs (extraction of fmri time series of ROIs only):   sara_VOIselection_indiv_coords.m
