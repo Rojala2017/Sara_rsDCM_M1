@@ -38,3 +38,4 @@ VARIOUS SCRIPTS NOT INCLUDED IN THE DCM PIPELINE:
 -Unzip and delete compressed files: unzip_and_delete.m 
 -Split regressor txt files into 4 chunks :      split_text_file.m
 -Creation of 4 chunks from fMRI time series:    split_chunks_creation.m
+-check_peb_results.m   to output PEB results again
